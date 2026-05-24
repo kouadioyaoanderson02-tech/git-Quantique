@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des enseignants</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <h1>Gestion des enseignants</h1>
+            <p>Suivi des professeurs, matières et expérience</p>
+        </div>
+        <nav class="topnav">
+            <a href="index.html">Accueil</a>
+            <a href="enseignants.html">Enseignants</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="overview">
+            <div class="card">
+                <span>👩‍🏫</span>
+                <h3>Enseignants</h3>
+                <p id="countTeachers">0</p>
+            </div>
+            <div class="card">
+                <span>📚</span>
+                <h3>Matières</h3>
+                <p id="countSubjects">0</p>
+            </div>
+            <div class="card">
+                <span>⏳</span>
+                <h3>Expérience moyenne</h3>
+                <p id="countExperience">0</p>
+            </div>
+        </section>
+
+        <section class="grid-section">
+            <article class="panel">
+                <div class="panel-header">
+                    <h2>Liste des enseignants</h2>
+                    <span class="panel-note">Gestion rapide des professeurs</span>
+                </div>
+                <div class="table-wrapper">
+                    <table id="teacherTable">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Matière</th>
+                                <th>Années d'expérience</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-header">
+                    <h2>Ajouter un enseignant</h2>
+                    <span class="panel-note">Formulaire d’ajout rapide</span>
+                </div>
+                <form id="teacherForm" class="form-card">
+                    <label>Nom
+                        <input type="text" id="nom" placeholder="Martin" required>
+                    </label>
+                    <label>Prénom
+                        <input type="text" id="prenom" placeholder="Claire" required>
+                    </label>
+                    <label>Matière
+                        <input type="text" id="matiere" placeholder="Mathématiques" required>
+                    </label>
+                    <label>Expérience (années)
+                        <input type="number" id="experience" min="0" max="50" placeholder="5" required>
+                    </label>
+                    <button type="submit" class="primary-btn">Ajouter l’enseignant</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>Objectif</h3>
+                <p>Centraliser les informations des enseignants et suivre rapidement les disciplines enseignées au sein de l’école.</p>
+            </div>
+            <div class="info-card">
+                <h3>Prochaine étape</h3>
+                <ul>
+                    <li>Ajouter la gestion des absences</li>
+                    <li>Relier à la base de données</li>
+                    <li>Gérer les emplois du temps</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">© 2026 Gestion École - Enseignants</footer>
+    <script src="JS/enseignants.js"></script>
+</body>
+</html>

@@ -1,12 +1,18 @@
-CREATE DATABASE database_db;
- USE  database_db;
-  
+CREATE DATABASE IF NOT EXISTS database_db;
+USE database_db;
 
+CREATE TABLE IF NOT EXISTS etudiants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    classe VARCHAR(50) NOT NULL
+);
 
-  CREATE TABLE etudiants (
-    id  INT AUTO_INCREMENT PRIMARY KEY,
-     nom VARCHAR(255),
-     prenom VARCHAR(255),
-     age INT ,
-     classe VARCHAR(50)
-  );
+CREATE TABLE IF NOT EXISTS enseignants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    matiere VARCHAR(255) NOT NULL,
+    experience INT NOT NULL
+);

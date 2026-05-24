@@ -3,30 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion école</title>
+    <title>Dashboard Gestion École</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h2> Bienvenue sur le mini site de gestion d’école</h2>
+    <header class="topbar">
+        <div class="brand">
+            <h1>Dashboard</h1>
+            <p>Gestion efficace de votre projet d'école</p>
+        </div>
+        <nav class="topnav">
+            <a href="#overview">Accueil</a>
+            <a href="#students">Étudiants</a>
+            <a href="#actions">Actions</a>
+            <a href="enseignants.html">Enseignants</a>
+        </nav>
     </header>
-   
-        <form id="form">
-                
-                    <label>Nom</label><input type="text" name="Nom"  placholder="entrez votre nom svp" required><br>
-                            <label>Prenom</label><input type="text" name="prenomnom"  placholder="entrez votre prenom svp" required><br>
-                                  <label>Âge</label> <input type="number" name="age"  placholder="Âge" required><br>
-                                  <label>classe</label> <input type="text" name="classe"  placholder="Classe" required><br>
-                                        <button type="submit">Ajouter</button>
 
+    <main class="content">
+        <section id="overview" class="overview">
+            <div class="card">
+                <span>🎓</span>
+                <h3>Étudiants</h3>
+                <p id="countStudents">0</p>
+            </div>
+            <div class="card">
+                <span>🏫</span>
+                <h3>Classes</h3>
+                <p id="countClasses">0</p>
+            </div>
+            <div class="card">
+                <span>📈</span>
+                <h3>Moyenne d’âge</h3>
+                <p id="countAverage">0</p>
+            </div>
+        </section>
 
-        </form>
+        <section class="grid-section">
+            <article class="panel" id="students">
+                <div class="panel-header">
+                    <h2>Liste des élèves</h2>
+                    <span class="panel-note">Suivi rapide et table de gestion</span>
+                </div>
+                <div class="table-wrapper">
+                    <table id="studentTable">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Âge</th>
+                                <th>Classe</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </article>
 
+            <article class="panel" id="actions">
+                <div class="panel-header">
+                    <h2>Ajouter un élève</h2>
+                    <span class="panel-note">Formulaire d’ajout rapide</span>
+                </div>
+                <form id="studentForm" class="form-card">
+                    <label>Nom
+                        <input type="text" id="nom" placeholder="Dupont" required>
+                    </label>
+                    <label>Prénom
+                        <input type="text" id="prenom" placeholder="Léa" required>
+                    </label>
+                    <label>Âge
+                        <input type="number" id="age" min="5" max="30" placeholder="15" required>
+                    </label>
+                    <label>Classe
+                        <input type="text" id="classe" placeholder="3ème" required>
+                    </label>
+                    <button type="submit" class="primary-btn">Ajouter l’élève</button>
+                </form>
+            </article>
+        </section>
 
-    <footer class="footer">© copyright tous droit reservé</footer>
+        <section class="info-section">
+            <div class="info-card">
+                <h3>Objectifs du projet</h3>
+                <p>Centralisez l’inscription, le suivi des classes et la gestion des élèvent dans un seul tableau de bord intuitif.</p>
+            </div>
+            <div class="info-card">
+                <h3>Prochaines tâches</h3>
+                <ul>
+                    <li>Ajouter la gestion des enseignants</li>
+                    <li>Mettre en place les notes et absences</li>
+                    <li>Relier le back-end MySQL</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-<script src="script.js"></script>
-  
+    <footer class="footer">© 2026 Gestion École - Dashboard</footer>
+    <script src="JS/script.js" defer></script>
 </body>
 </html>
 

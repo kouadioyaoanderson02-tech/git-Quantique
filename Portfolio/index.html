@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Kouadio Yao Anderson</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">KYA<span>.</span></div>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-content">
+      <p class="hello">Bonjour, je suis</p>
+      <h1>Kouadio Yao Anderson <br/><span>Yves Junior</span></h1>
+      <p class="tagline">Étudiant en Informatique · Développeur d'Applications · Passionné de Cybersécurité</p>
+      <div class="hero-btns">
+        <a href="#projets" class="btn">Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="avatar">
+        <img src="IMAGE/ander.jpeg.jpeg" alt="Kouadio Yao Anderson"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos" class="section">
+    <h2 class="section-title">À <span>Propos</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Je suis <strong>Kouadio Yao Anderson Yves Junior</strong>, étudiant en informatique passionné par le développement d'applications web et la cybersécurité. J'aime créer des solutions numériques utiles et sécurisées.</p>
+        <p>Mon objectif est de combiner mes compétences en développement et en sécurité informatique pour concevoir des applications robustes et fiables.</p>
+        <div class="info-grid">
+          <div><i class="fa-solid fa-envelope"></i> kouadioyaoanderson02@gmail.com</div>
+          <div><i class="fa-solid fa-phone"></i> 0546348713 / 0508961713</div>
+          <div><i class="fa-brands fa-github"></i> kouadioyaoanderson02-tech</div>
+          <div><i class="fa-solid fa-map-marker-alt"></i> Côte d'Ivoire</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences" class="section section-dark">
+    <h2 class="section-title">Mes <span>Compétences</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+      <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
+      <div class="skill-card"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fa-brands fa-java"></i><p>Java</p></div>
+      <div class="skill-card"><i class="fa-brands fa-php"></i><p>PHP</p></div>
+      <div class="skill-card"><i class="fa-solid fa-database"></i><p>MySQL</p></div>
+      <div class="skill-card"><i class="fa-solid fa-shield-halved"></i><p>Cybersécurité</p></div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="section">
+    <h2 class="section-title">Mes <span>Projets</span></h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-car"></i></div>
+        <h3>Parc Automobile</h3>
+        <p>Application de gestion d'un parc automobile : suivi des véhicules, entrées/sorties et maintenance.</p>
+        <div class="tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-bus"></i></div>
+        <h3>Site de Transport</h3>
+        <p>Plateforme web pour la gestion et la réservation de services de transport en ligne.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Survie Quotidienne</h3>
+        <p>Site web fournissant des conseils et ressources pratiques pour la vie quotidienne.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <h2 class="section-title">Me <span>Contacter</span></h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>kouadioyaoanderson02@gmail.com</span></div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>0546348713 / 0508961713</span></div>
+        <div class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/kouadioyaoanderson02-tech" target="_blank">kouadioyaoanderson02-tech</a>
+        </div>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Votre nom" required/>
+        <input type="email" placeholder="Votre email" required/>
+        <textarea rows="5" placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kouadio Yao Anderson Yves Junior — Tous droits réservés</p>
+    <div class="social-links">
+      <a href="https://github.com/kouadioyaoanderson02-tech" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:kouadioyaoanderson02@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:+2250546348713"><i class="fa-solid fa-phone"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

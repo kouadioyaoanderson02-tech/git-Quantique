@@ -11,7 +11,7 @@ public class emprunt {
 
 
         //constructeur
-        public void emprunter(Livre livre, utilisateurs utlisateurs) {
+        public void emprunter(Livre livre, utilisateurs utilisateurs) {
             this.livre = livre;
             this.utilisateurs = utilisateurs;
               this.dateEmprunt = LocalDate.now();

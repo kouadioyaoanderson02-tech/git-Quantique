@@ -1,19 +1,18 @@
 package GESTION_BIBLIOTHEQUE;
 
-import GESTION_BIBLIOTHEQUE.Model.Bibliothecaire;
+import java.sql.Connection;
+import GESTION_BIBLIOTHEQUE.database.connexion_db;
 
 public class main {
 
-    public static void main(String[] args) {  
+    public static void Main(String[] args) {
 
-        Bibliothecaire b1 = new Bibliothecaire(
-                1,
-                "Kouadio",
-                "Anderson"
-        );
+        Connection conn = connexion_db.getConnection();
 
-        System.out.println("ID : " + b1.getId());
-        System.out.println("Nom : " + b1.getNom());
-        System.out.println("Prénom : " + b1.getPrenom());
+        if (conn != null) {
+            System.out.println("Base de données connectée.");
+        } else {
+            System.out.println("Connexion échouée.");
+        }
     }
 }

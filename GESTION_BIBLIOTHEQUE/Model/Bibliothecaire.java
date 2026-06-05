@@ -1,34 +1,44 @@
 package GESTION_BIBLIOTHEQUE.Model;
 
 public class Bibliothecaire {
+
     private int id;
     private String nom;
     private String prenom;
-    //  constructeur
-    public Bibliothecaire(int id, String nom, String prenom) {
+    private String poste;
+
+    // Constructeur
+    public Bibliothecaire(int id, String nom, String prenom, String poste) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.poste = poste;
     }
-    Bibliothecaire b1 = new Bibliothecaire(1, "Doe", "John");
-    // getters
+
+    // Getters
     public int getId() {
         return id;
     }
+
     public String getNom() {
         return nom;
     }
+
     public String getPrenom() {
         return prenom;
     }
 
-   @Override
+    public String getPoste() {
+        return poste;
+    }
+
+    @Override
     public String toString() {
-        return "Bibliothécaire {" +
+        return "Bibliothecaire{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
+                ", poste='" + poste + '\'' +
                 '}';
     }
-
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suivi — TaxiExpress</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-taxi"></i> Taxi<span>Express</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="commander.html">Commander</a></li>
+      <li><a href="suivi.html" class="active">Suivi</a></li>
+      <li><a href="chauffeurs.html">Chauffeurs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-btns">
+      <a href="login.html" class="btn-outline-nav">Connexion</a>
+      <a href="register.html" class="btn-nav">S'inscrire</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1><i class="fa-solid fa-map"></i> Suivi de course</h1>
+    <p>Suivez votre taxi en temps réel</p>
+  </div>
+
+  <div class="suivi-layout">
+
+    <div class="suivi-info">
+      <div class="status-card">
+        <div class="status-badge en-route">En route</div>
+        <h3>Koné Mamadou</h3>
+        <p><i class="fa-solid fa-star" style="color:#f59e0b"></i> 4.9 · Toyota Corolla · Blanc</p>
+        <p><i class="fa-solid fa-hashtag"></i> AB 1234 CI</p>
+        <div class="arrival"><i class="fa-solid fa-clock"></i> Arrivée dans <strong>3 min</strong></div>
+      </div>
+
+      <div class="trajet-card">
+        <div class="trajet-point depart"><i class="fa-solid fa-circle" style="color:#f59e0b"></i><div><small>Départ</small><p>Cocody Angré</p></div></div>
+        <div class="trajet-line"></div>
+        <div class="trajet-point dest"><i class="fa-solid fa-location-dot" style="color:#2563eb"></i><div><small>Destination</small><p>Plateau</p></div></div>
+      </div>
+
+      <div class="course-details">
+        <div class="detail-item"><span>Distance</span><strong>12 km</strong></div>
+        <div class="detail-item"><span>Durée estimée</span><strong>25 min</strong></div>
+        <div class="detail-item"><span>Prix</span><strong>1 500 FCFA</strong></div>
+        <div class="detail-item"><span>Paiement</span><strong>Espèces</strong></div>
+      </div>
+
+      <div class="action-btns">
+        <a href="tel:+2250700000000" class="btn-primary" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;">
+          <i class="fa-solid fa-phone"></i> Appeler le chauffeur
+        </a>
+        <button class="btn-reset" onclick="annuler()"><i class="fa-solid fa-xmark"></i> Annuler la course</button>
+      </div>
+    </div>
+
+    <div class="map-placeholder">
+      <i class="fa-solid fa-map" style="font-size:4rem;color:#2563eb;opacity:0.3;"></i>
+      <p style="color:#94a3b8;margin-top:12px;">Carte en temps réel</p>
+      <small style="color:#cbd5e1;">(Intégration Google Maps via API Java)</small>
+      <div class="taxi-anim"><i class="fa-solid fa-taxi"></i></div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">© 2025 TaxiExpress — Tous droits réservés</div>
+  </footer>
+
+  <script>
+    function annuler() {
+      if(confirm('Annuler la course ?')) {
+        alert('Course annulée.');
+        window.location.href = '../index.html';
+      }
+    }
+  </script>
+</body>
+</html>

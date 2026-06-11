@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription — TaxiExpress</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="auth-body">
+
+  <div class="auth-wrapper">
+
+    <!-- GAUCHE -->
+    <div class="auth-left">
+      <div class="auth-brand">
+        <i class="fa-solid fa-taxi"></i> Taxi<span>Express</span>
+      </div>
+      <h2>Rejoignez TaxiExpress</h2>
+      <p>Créez votre compte et profitez d'un service de taxi rapide et fiable partout en Côte d'Ivoire.</p>
+      <div class="auth-features">
+        <div class="auth-feature"><i class="fa-solid fa-gift"></i> Première course offerte</div>
+        <div class="auth-feature"><i class="fa-solid fa-star"></i> Programme de fidélité</div>
+        <div class="auth-feature"><i class="fa-solid fa-headset"></i> Support 24h/24</div>
+      </div>
+    </div>
+
+    <!-- DROITE -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Créer un compte</h2>
+        <p class="auth-sub">Inscription rapide et gratuite</p>
+
+        <form id="registerForm" onsubmit="inscrire(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label><i class="fa-solid fa-user"></i> Nom</label>
+              <input type="text" id="r-nom" placeholder="Koné" required/>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-solid fa-user"></i> Prénom</label>
+              <input type="text" id="r-prenom" placeholder="Mamadou" required/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-envelope"></i> Email</label>
+            <input type="email" id="r-email" placeholder="email@mail.com" required/>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-phone"></i> Téléphone</label>
+            <input type="tel" id="r-tel" placeholder="+225 07 XX XX XX XX" required/>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-lock"></i> Mot de passe</label>
+            <div class="password-field">
+              <input type="password" id="r-pass" placeholder="Minimum 6 caractères" required/>
+              <button type="button" onclick="togglePass('r-pass','eye2')"><i class="fa-solid fa-eye" id="eye2"></i></button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-lock"></i> Confirmer le mot de passe</label>
+            <div class="password-field">
+              <input type="password" id="r-pass2" placeholder="Répétez le mot de passe" required/>
+              <button type="button" onclick="togglePass('r-pass2','eye3')"><i class="fa-solid fa-eye" id="eye3"></i></button>
+            </div>
+          </div>
+
+          <p class="error-msg" id="errorMsg" style="display:none;">
+            <i class="fa-solid fa-circle-exclamation"></i> <span id="errorText"></span>
+          </p>
+
+          <label class="checkbox-label" style="margin-bottom:16px;">
+            <input type="checkbox" id="cgu" required/>
+            J'accepte les <a href="#">conditions d'utilisation</a>
+          </label>
+
+          <button type="submit" class="btn-primary" style="width:100%;padding:14px;font-size:1rem;">
+            <i class="fa-solid fa-user-plus"></i> Créer mon compte
+          </button>
+        </form>
+
+        <p class="auth-switch" style="margin-top:20px;">
+          Déjà un compte ? <a href="login.html">Se connecter</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function inscrire(e) {
+      e.preventDefault();
+      const pass  = document.getElementById('r-pass').value;
+      const pass2 = document.getElementById('r-pass2').value;
+      const err   = document.getElementById('errorMsg');
+      const errTxt = document.getElementById('errorText');
+
+      if (pass.length < 6) {
+        errTxt.textContent = 'Le mot de passe doit contenir au moins 6 caractères.';
+        err.style.display = 'flex'; return;
+      }
+      if (pass !== pass2) {
+        errTxt.textContent = 'Les mots de passe ne correspondent pas.';
+        err.style.display = 'flex'; return;
+      }
+      err.style.display = 'none';
+      alert('Compte créé avec succès ! Bienvenue sur TaxiExpress 🚕');
+      window.location.href = '../index.html';
+    }
+
+    function togglePass(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon  = document.getElementById(iconId);
+      input.type  = input.type === 'password' ? 'text' : 'password';
+      icon.className = input.type === 'password' ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash';
+    }
+  </script>
+</body>
+</html>

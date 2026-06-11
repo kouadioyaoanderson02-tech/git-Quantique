@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commander — TaxiExpress</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-taxi"></i> Taxi<span>Express</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="commander.html" class="active">Commander</a></li>
+      <li><a href="suivi.html">Suivi</a></li>
+      <li><a href="chauffeurs.html">Chauffeurs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-btns">
+      <a href="login.html" class="btn-outline-nav">Connexion</a>
+      <a href="register.html" class="btn-nav">S'inscrire</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1><i class="fa-solid fa-taxi"></i> Commander un taxi</h1>
+    <p>Remplissez le formulaire pour réserver votre course</p>
+  </div>
+
+  <div class="commander-layout">
+
+    <!-- FORMULAIRE -->
+    <div class="commander-form">
+      <form id="commandeForm" onsubmit="passerCommande(event)">
+
+        <div class="form-section">
+          <h3><i class="fa-solid fa-route"></i> Trajet</h3>
+          <div class="form-group">
+            <label><i class="fa-solid fa-location-dot" style="color:#f59e0b"></i> Point de départ</label>
+            <input type="text" id="depart" placeholder="Ex: Cocody Angré" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fa-solid fa-flag" style="color:#2563eb"></i> Destination</label>
+            <input type="text" id="destination" placeholder="Ex: Plateau" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fa-solid fa-calendar"></i> Date & Heure</label>
+            <input type="datetime-local" id="datetime" required/>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3><i class="fa-solid fa-car"></i> Type de course</h3>
+          <div class="type-grid">
+            <label class="type-card">
+              <input type="radio" name="type" value="express" checked/>
+              <i class="fa-solid fa-bolt"></i>
+              <span>Express</span>
+              <small>~5 min</small>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="type" value="reservation"/>
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Réservation</span>
+              <small>Planifié</small>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="type" value="partage"/>
+              <i class="fa-solid fa-users"></i>
+              <span>Partagé</span>
+              <small>Économique</small>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="type" value="business"/>
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Business</span>
+              <small>Premium</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3><i class="fa-solid fa-user"></i> Vos informations</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nom complet</label>
+              <input type="text" id="nom" placeholder="Votre nom" required/>
+            </div>
+            <div class="form-group">
+              <label>Téléphone</label>
+              <input type="tel" id="telephone" placeholder="+225 07 XX XX XX XX" required/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3><i class="fa-solid fa-credit-card"></i> Paiement</h3>
+          <div class="paiement-grid">
+            <label class="pay-card"><input type="radio" name="paiement" value="especes" checked/><i class="fa-solid fa-money-bill"></i> Espèces</label>
+            <label class="pay-card"><input type="radio" name="paiement" value="momo"/><i class="fa-brands fa-google-pay"></i> Mobile Money</label>
+            <label class="pay-card"><input type="radio" name="paiement" value="carte"/><i class="fa-solid fa-credit-card"></i> Carte</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%;padding:16px;font-size:1.1rem;">
+          <i class="fa-solid fa-taxi"></i> Confirmer la commande
+        </button>
+      </form>
+    </div>
+
+    <!-- RÉSUMÉ -->
+    <div class="commander-aside">
+      <div class="resume-card">
+        <h3><i class="fa-solid fa-receipt"></i> Résumé de la course</h3>
+        <div class="resume-item"><span>Départ</span><strong id="r-depart">—</strong></div>
+        <div class="resume-item"><span>Destination</span><strong id="r-dest">—</strong></div>
+        <div class="resume-item"><span>Type</span><strong id="r-type">Express</strong></div>
+        <div class="resume-item"><span>Distance estimée</span><strong>~12 km</strong></div>
+        <div class="resume-item total"><span>Prix estimé</span><strong id="r-prix">1 500 FCFA</strong></div>
+      </div>
+
+      <div class="chauffeurs-proches">
+        <h3><i class="fa-solid fa-taxi"></i> Chauffeurs proches</h3>
+        <div class="chauffeur-item"><i class="fa-solid fa-user-circle"></i><div><p>Koné Mamadou</p><small>⭐ 4.9 · 2 min</small></div><span class="dispo">Dispo</span></div>
+        <div class="chauffeur-item"><i class="fa-solid fa-user-circle"></i><div><p>Traoré Seydou</p><small>⭐ 4.7 · 4 min</small></div><span class="dispo">Dispo</span></div>
+        <div class="chauffeur-item"><i class="fa-solid fa-user-circle"></i><div><p>Bamba Ibrahima</p><small>⭐ 4.8 · 6 min</small></div><span class="dispo">Dispo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMATION -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <i class="fa-solid fa-circle-check" style="font-size:3rem;color:#22c55e;"></i>
+      <h2>Commande confirmée !</h2>
+      <p>Votre taxi arrive dans <strong>3 minutes</strong></p>
+      <p>Chauffeur : <strong>Koné Mamadou</strong> · <strong>AB 1234 CI</strong></p>
+      <a href="suivi.html" class="btn-primary" style="display:block;text-align:center;text-decoration:none;margin-top:16px;">
+        <i class="fa-solid fa-map"></i> Suivre ma course
+      </a>
+      <button onclick="document.getElementById('modal').style.display='none'" class="btn-reset" style="width:100%;margin-top:8px;">Fermer</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">© 2025 TaxiExpress — Tous droits réservés</div>
+  </footer>
+
+  <script src="../js/commander.js"></script>
+</body>
+</html>

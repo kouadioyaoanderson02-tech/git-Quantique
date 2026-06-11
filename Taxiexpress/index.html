@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaxiExpress — Votre taxi en un clic</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-taxi"></i> Taxi<span>Express</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="pages/commander.html">Commander</a></li>
+      <li><a href="pages/suivi.html">Suivi</a></li>
+      <li><a href="pages/chauffeurs.html">Chauffeurs</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-btns">
+      <a href="pages/login.html" class="btn-outline-nav">Connexion</a>
+      <a href="pages/register.html" class="btn-nav">S'inscrire</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Votre taxi,<br/><span>en un clic !</span></h1>
+      <p>Réservez un taxi rapide, sûr et confortable partout en Côte d'Ivoire</p>
+      <a href="pages/commander.html" class="btn-hero"><i class="fa-solid fa-taxi"></i> Commander maintenant</a>
+    </div>
+    <div class="hero-card">
+      <div class="quick-form">
+        <h3><i class="fa-solid fa-route"></i> Réservation rapide</h3>
+        <div class="form-group">
+          <label><i class="fa-solid fa-location-dot" style="color:#f59e0b"></i> Départ</label>
+          <input type="text" placeholder="Votre position actuelle"/>
+        </div>
+        <div class="form-group">
+          <label><i class="fa-solid fa-flag" style="color:#2563eb"></i> Destination</label>
+          <input type="text" placeholder="Où allez-vous ?"/>
+        </div>
+        <div class="form-group">
+          <label><i class="fa-solid fa-calendar"></i> Date & Heure</label>
+          <input type="datetime-local"/>
+        </div>
+        <a href="pages/commander.html" class="btn-primary" style="display:block;text-align:center;text-decoration:none;margin-top:10px;">
+          <i class="fa-solid fa-search"></i> Trouver un taxi
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat"><h3>500+</h3><p>Chauffeurs actifs</p></div>
+    <div class="stat"><h3>10 000+</h3><p>Courses effectuées</p></div>
+    <div class="stat"><h3>25+</h3><p>Villes couvertes</p></div>
+    <div class="stat"><h3>4.8 ⭐</h3><p>Note moyenne</p></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <h2 class="section-title">Nos <span>Services</span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Express</h3>
+        <p>Taxi disponible en moins de 5 minutes dans votre zone.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h3>Réservation</h3>
+        <p>Planifiez votre course à l'avance selon vos besoins.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Partagé</h3>
+        <p>Partagez votre course et réduisez vos frais de transport.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Business</h3>
+        <p>Service premium pour vos déplacements professionnels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT ÇA MARCHE -->
+  <section class="section section-dark">
+    <h2 class="section-title">Comment ça <span>marche ?</span></h2>
+    <div class="steps-grid">
+      <div class="step"><div class="step-num">1</div><i class="fa-solid fa-map-marker-alt"></i><h3>Indiquez votre position</h3><p>Entrez votre adresse de départ et destination.</p></div>
+      <div class="step"><div class="step-num">2</div><i class="fa-solid fa-taxi"></i><h3>Choisissez votre taxi</h3><p>Sélectionnez le chauffeur disponible le plus proche.</p></div>
+      <div class="step"><div class="step-num">3</div><i class="fa-solid fa-credit-card"></i><h3>Payez en toute sécurité</h3><p>Paiement mobile money ou espèces à la fin de la course.</p></div>
+      <div class="step"><div class="step-num">4</div><i class="fa-solid fa-star"></i><h3>Notez votre course</h3><p>Donnez votre avis pour améliorer notre service.</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3><i class="fa-solid fa-taxi"></i> TaxiExpress</h3>
+        <p>Votre partenaire de transport fiable en Côte d'Ivoire.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="pages/commander.html">Commander un taxi</a></li>
+          <li><a href="pages/chauffeurs.html">Devenir chauffeur</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-phone"></i> +225 07 00 00 00 00</p>
+        <p><i class="fa-solid fa-envelope"></i> contact@taxiexpress.ci</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +225 07 00 00 00 00</p>
+      </div>
+      <div>
+        <h4>Suivez-nous</h4>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 TaxiExpress — Tous droits réservés</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

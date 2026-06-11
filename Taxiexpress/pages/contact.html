@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — TaxiExpress</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-taxi"></i> Taxi<span>Express</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="commander.html">Commander</a></li>
+      <li><a href="suivi.html">Suivi</a></li>
+      <li><a href="chauffeurs.html">Chauffeurs</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-btns">
+      <a href="login.html" class="btn-outline-nav">Connexion</a>
+      <a href="register.html" class="btn-nav">S'inscrire</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1><i class="fa-solid fa-headset"></i> Contactez-nous</h1>
+    <p>Notre équipe est disponible 24h/24 et 7j/7</p>
+  </div>
+
+  <div class="contact-layout">
+
+    <!-- INFOS -->
+    <div class="contact-infos">
+
+      <div class="info-card">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <h4>Téléphone</h4>
+          <p>+225 07 00 00 00 00</p>
+          <small>Disponible 24h/24</small>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div>
+          <h4>WhatsApp</h4>
+          <p>+225 07 00 00 00 00</p>
+          <small>Réponse rapide</small>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>contact@taxiexpress.ci</p>
+          <small>Réponse sous 24h</small>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Adresse</h4>
+          <p>Plateau, Abidjan</p>
+          <small>Côte d'Ivoire</small>
+        </div>
+      </div>
+
+      <div class="social-contact">
+        <h4>Suivez-nous</h4>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FORMULAIRE -->
+    <form class="contact-form" id="contactForm" onsubmit="envoyerMessage(event)">
+      <h3><i class="fa-solid fa-paper-plane"></i> Envoyez-nous un message</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nom complet</label>
+          <input type="text" placeholder="Votre nom" required/>
+        </div>
+        <div class="form-group">
+          <label>Téléphone</label>
+          <input type="tel" placeholder="+225 07 XX XX XX XX" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="votre@email.com"/>
+      </div>
+
+      <div class="form-group">
+        <label>Sujet</label>
+        <select>
+          <option value="">-- Choisir un sujet --</option>
+          <option>Problème avec une course</option>
+          <option>Devenir chauffeur</option>
+          <option>Paiement</option>
+          <option>Signaler un incident</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Décrivez votre demande..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width:100%;padding:15px;font-size:1rem;">
+        <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+      </button>
+    </form>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3><i class="fa-solid fa-taxi"></i> TaxiExpress</h3>
+        <p>Votre partenaire de transport fiable en Côte d'Ivoire.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="commander.html">Commander un taxi</a></li>
+          <li><a href="chauffeurs.html">Devenir chauffeur</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-phone"></i> +225 07 00 00 00 00</p>
+        <p><i class="fa-solid fa-envelope"></i> contact@taxiexpress.ci</p>
+      </div>
+      <div>
+        <h4>Suivez-nous</h4>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 TaxiExpress — Tous droits réservés</div>
+  </footer>
+
+  <script>
+    function envoyerMessage(e) {
+      e.preventDefault();
+      alert('Message envoyé ! Nous vous répondrons dans les plus brefs délais. 🚕');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Admin — TaxiExpress</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo"><i class="fa-solid fa-taxi"></i> Taxi<span>Express</span></div>
+      <nav class="sidebar-nav">
+        <a href="#profil" class="sidebar-link active" onclick="showSection('profil', this)"><i class="fa-solid fa-user-tie"></i> Mon Profil</a>
+        <a href="#voiture" class="sidebar-link" onclick="showSection('voiture', this)"><i class="fa-solid fa-car"></i> Ma Voiture</a>
+        <a href="#courses" class="sidebar-link" onclick="showSection('courses', this)"><i class="fa-solid fa-route"></i> Courses</a>
+        <a href="#parametres" class="sidebar-link" onclick="showSection('parametres', this)"><i class="fa-solid fa-gear"></i> Paramètres</a>
+      </nav>
+      <a href="admin-login.html" class="sidebar-logout"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="admin-main">
+
+      <!-- HEADER -->
+      <div class="admin-header">
+        <h2 id="pageTitle">Mon Profil</h2>
+        <div class="admin-user"><i class="fa-solid fa-user-circle"></i> Administrateur</div>
+      </div>
+
+      <!-- SECTION PROFIL -->
+      <section id="section-profil" class="admin-section active">
+        <div class="admin-card">
+          <h3><i class="fa-solid fa-id-card"></i> Informations du propriétaire</h3>
+          <form id="profilForm" onsubmit="sauvegarder(event, 'profil')">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nom</label>
+                <input type="text" id="p-nom" placeholder="Ex: Koné" required/>
+              </div>
+              <div class="form-group">
+                <label>Prénom</label>
+                <input type="text" id="p-prenom" placeholder="Ex: Mamadou" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Téléphone</label>
+                <input type="tel" id="p-tel" placeholder="+225 07 XX XX XX XX" required/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="p-email" placeholder="email@mail.com"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Adresse</label>
+              <input type="text" id="p-adresse" placeholder="Ex: Cocody Angré, Abidjan"/>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Commune</label>
+                <input type="text" id="p-commune" placeholder="Ex: Cocody"/>
+              </div>
+              <div class="form-group">
+                <label>Ville</label>
+                <input type="text" id="p-ville" placeholder="Ex: Abidjan"/>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">
+              <i class="fa-solid fa-floppy-disk"></i> Enregistrer
+            </button>
+          </form>
+        </div>
+
+        <!-- APERÇU -->
+        <div class="admin-card preview-card" id="profil-preview" style="display:none;">
+          <h3><i class="fa-solid fa-eye"></i> Aperçu enregistré</h3>
+          <div id="profil-preview-content"></div>
+        </div>
+      </section>
+
+      <!-- SECTION VOITURE -->
+      <section id="section-voiture" class="admin-section">
+        <div class="admin-card">
+          <h3><i class="fa-solid fa-car"></i> Informations du véhicule</h3>
+          <form id="voitureForm" onsubmit="sauvegarder(event, 'voiture')">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Marque</label>
+                <input type="text" id="v-marque" placeholder="Ex: Toyota" required/>
+              </div>
+              <div class="form-group">
+                <label>Modèle</label>
+                <input type="text" id="v-modele" placeholder="Ex: Corolla" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Couleur</label>
+                <input type="text" id="v-couleur" placeholder="Ex: Blanc"/>
+              </div>
+              <div class="form-group">
+                <label>Immatriculation</label>
+                <input type="text" id="v-immat" placeholder="Ex: AB 1234 CI" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Année</label>
+                <input type="number" id="v-annee" min="1990" max="2025" placeholder="Ex: 2020"/>
+              </div>
+              <div class="form-group">
+                <label>Statut</label>
+                <select id="v-statut">
+                  <option value="Disponible">Disponible</option>
+                  <option value="En mission">En mission</option>
+                  <option value="En maintenance">En maintenance</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Nombre de places</label>
+              <input type="number" id="v-places" min="1" max="9" value="4"/>
+            </div>
+            <button type="submit" class="btn-primary">
+              <i class="fa-solid fa-floppy-disk"></i> Enregistrer
+            </button>
+          </form>
+        </div>
+
+        <!-- APERÇU -->
+        <div class="admin-card preview-card" id="voiture-preview" style="display:none;">
+          <h3><i class="fa-solid fa-eye"></i> Aperçu enregistré</h3>
+          <div id="voiture-preview-content"></div>
+        </div>
+      </section>
+
+      <!-- SECTION COURSES -->
+      <section id="section-courses" class="admin-section">
+        <div class="admin-card">
+          <h3><i class="fa-solid fa-route"></i> Historique des courses</h3>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr><th>#</th><th>Client</th><th>Départ</th><th>Destination</th><th>Prix</th><th>Statut</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>001</td><td>Diallo Aminata</td><td>Cocody</td><td>Plateau</td><td>1 500 FCFA</td><td><span class="badge-status terminé">Terminé</span></td></tr>
+                <tr><td>002</td><td>Traoré Seydou</td><td>Yopougon</td><td>Marcory</td><td>2 000 FCFA</td><td><span class="badge-status en-cours">En cours</span></td></tr>
+                <tr><td>003</td><td>Bamba Fatoumata</td><td>Abobo</td><td>Adjamé</td><td>1 200 FCFA</td><td><span class="badge-status terminé">Terminé</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION PARAMÈTRES -->
+      <section id="section-parametres" class="admin-section">
+
+        <!-- AJOUTER PIÈCE -->
+        <div class="admin-card">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Ajouter une pièce</h3>
+          <form id="pieceForm" onsubmit="ajouterPiece(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nom de la pièce</label>
+                <input type="text" id="piece-nom" placeholder="Ex: Filtre à huile" required/>
+              </div>
+              <div class="form-group">
+                <label>Catégorie</label>
+                <select id="piece-categorie">
+                  <option>Moteur</option>
+                  <option>Freins</option>
+                  <option>Suspension</option>
+                  <option>Électrique</option>
+                  <option>Carrosserie</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>État</label>
+                <select id="piece-etat">
+                  <option value="Bon">Bon état</option>
+                  <option value="Usé">Usé</option>
+                  <option value="À changer">À changer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Coût (FCFA)</label>
+                <input type="number" id="piece-cout" placeholder="Ex: 25000" min="0"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Dernier remplacement</label>
+                <input type="date" id="piece-date"/>
+              </div>
+              <div class="form-group">
+                <label>Prochain remplacement</label>
+                <input type="date" id="piece-next"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Note</label>
+              <input type="text" id="piece-note" placeholder="Remarque éventuelle..."/>
+            </div>
+            <button type="submit" class="btn-primary">
+              <i class="fa-solid fa-plus"></i> Ajouter la pièce
+            </button>
+          </form>
+        </div>
+
+        <!-- LISTE PIÈCES -->
+        <div class="admin-card">
+          <h3><i class="fa-solid fa-list"></i> Liste des pièces <span id="piece-count" style="font-size:0.85rem;color:#64748b;font-weight:400;"></span></h3>
+          <div class="pieces-filters">
+            <button class="filter-btn active" onclick="filtrerPieces('tous', this)">Tous</button>
+            <button class="filter-btn" onclick="filtrerPieces('Bon', this)">Bon état</button>
+            <button class="filter-btn alerte" onclick="filtrerPieces('À changer', this)">À changer</button>
+          </div>
+          <div class="table-wrapper">
+            <table class="admin-table" id="piecesTable">
+              <thead>
+                <tr><th>Pièce</th><th>Catégorie</th><th>État</th><th>Coût</th><th>Dernier remplacement</th><th>Prochain</th><th>Action</th></tr>
+              </thead>
+              <tbody id="piecesList"></tbody>
+            </table>
+          </div>
+          <div id="empty-pieces" style="text-align:center;padding:30px;color:#94a3b8;display:none;">
+            <i class="fa-solid fa-inbox" style="font-size:2rem;"></i><p style="margin-top:8px;">Aucune pièce enregistrée</p>
+          </div>
+        </div>
+
+        <!-- ALERTES -->
+        <div class="admin-card" id="alertes-card">
+          <h3><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b"></i> Alertes de maintenance</h3>
+          <div id="alertes-list"><p style="color:#94a3b8;font-size:0.9rem;">Aucune alerte pour le moment.</p></div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

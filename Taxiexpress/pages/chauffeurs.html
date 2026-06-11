@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chauffeurs — TaxiExpress</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-taxi"></i> Taxi<span>Express</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="commander.html">Commander</a></li>
+      <li><a href="suivi.html">Suivi</a></li>
+      <li><a href="chauffeurs.html" class="active">Chauffeurs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-btns">
+      <a href="login.html" class="btn-outline-nav">Connexion</a>
+      <a href="register.html" class="btn-nav">S'inscrire</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1><i class="fa-solid fa-id-badge"></i> Nos Chauffeurs</h1>
+    <p>Des chauffeurs professionnels vérifiés et disponibles près de vous</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-bar">
+    <button class="tab-btn active" onclick="switchTab('liste', this)">
+      <i class="fa-solid fa-users"></i> Chauffeurs disponibles
+    </button>
+    <button class="tab-btn" onclick="switchTab('inscription', this)">
+      <i class="fa-solid fa-user-plus"></i> Devenir chauffeur
+    </button>
+  </div>
+
+  <!-- ===== TAB LISTE ===== -->
+  <div id="tab-liste" class="tab-content active">
+
+    <!-- FILTRES -->
+    <div class="chauffeurs-toolbar">
+      <input type="text" id="searchChauffeur" placeholder="🔍 Rechercher un chauffeur..." oninput="filtrerChauffeurs()" class="search-input"/>
+      <div class="toolbar-filters">
+        <select id="filterNote" onchange="filtrerChauffeurs()">
+          <option value="">Toutes les notes</option>
+          <option value="5">⭐ 5.0</option>
+          <option value="4.5">⭐ 4.5+</option>
+          <option value="4">⭐ 4.0+</option>
+        </select>
+        <select id="filterDispo" onchange="filtrerChauffeurs()">
+          <option value="">Tous les statuts</option>
+          <option value="Disponible">Disponible</option>
+          <option value="En course">En course</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="chauffeurs-stats">
+      <div class="c-stat"><h3 id="nbDispo">—</h3><p>Disponibles</p></div>
+      <div class="c-stat"><h3>4.8 ⭐</h3><p>Note moyenne</p></div>
+      <div class="c-stat"><h3 id="nbTotal">—</h3><p>Total chauffeurs</p></div>
+    </div>
+
+    <!-- LISTE -->
+    <div class="chauffeurs-grid" id="chauffeursGrid"></div>
+
+  </div>
+
+  <!-- ===== TAB INSCRIPTION ===== -->
+  <div id="tab-inscription" class="tab-content">
+    <div class="inscription-layout">
+
+      <!-- AVANTAGES -->
+      <div class="avantages">
+        <h3><i class="fa-solid fa-star"></i> Pourquoi rejoindre TaxiExpress ?</h3>
+        <div class="avantage-item"><i class="fa-solid fa-money-bill-wave"></i><div><h4>Revenus attractifs</h4><p>Gagnez jusqu'à 300 000 FCFA par mois.</p></div></div>
+        <div class="avantage-item"><i class="fa-solid fa-clock"></i><div><h4>Horaires flexibles</h4><p>Travaillez quand vous voulez.</p></div></div>
+        <div class="avantage-item"><i class="fa-solid fa-headset"></i><div><h4>Support dédié</h4><p>Une équipe disponible pour vous aider.</p></div></div>
+        <div class="avantage-item"><i class="fa-solid fa-shield-halved"></i><div><h4>Assurance incluse</h4><p>Couverture assurance pour chaque course.</p></div></div>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="inscription-form-card">
+        <h3><i class="fa-solid fa-user-plus"></i> Formulaire d'inscription</h3>
+        <form id="chauffeurForm" onsubmit="inscrireChauffeur(event)">
+
+          <div class="form-section-title">Informations personnelles</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nom</label>
+              <input type="text" id="c-nom" placeholder="Ex: Koné" required/>
+            </div>
+            <div class="form-group">
+              <label>Prénom</label>
+              <input type="text" id="c-prenom" placeholder="Ex: Mamadou" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Téléphone</label>
+              <input type="tel" id="c-tel" placeholder="+225 07 XX XX XX XX" required/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="c-email" placeholder="email@mail.com"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Commune</label>
+              <input type="text" id="c-commune" placeholder="Ex: Cocody" required/>
+            </div>
+            <div class="form-group">
+              <label>Ville</label>
+              <input type="text" id="c-ville" placeholder="Ex: Abidjan" required/>
+            </div>
+          </div>
+
+          <div class="form-section-title">Informations du véhicule</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Marque</label>
+              <input type="text" id="c-marque" placeholder="Ex: Toyota" required/>
+            </div>
+            <div class="form-group">
+              <label>Modèle</label>
+              <input type="text" id="c-modele" placeholder="Ex: Corolla" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Couleur</label>
+              <input type="text" id="c-couleur" placeholder="Ex: Blanc" required/>
+            </div>
+            <div class="form-group">
+              <label>Immatriculation</label>
+              <input type="text" id="c-immat" placeholder="Ex: AB 1234 CI" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Année</label>
+              <input type="number" id="c-annee" min="2000" max="2025" placeholder="Ex: 2018"/>
+            </div>
+            <div class="form-group">
+              <label>Permis de conduire N°</label>
+              <input type="text" id="c-permis" placeholder="Ex: CI-12345" required/>
+            </div>
+          </div>
+
+          <div class="form-section-title">Expérience</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Années d'expérience</label>
+              <select id="c-exp" onchange="toggleExpCustom()">
+                <option>Moins de 1 an</option>
+                <option>1 à 3 ans</option>
+                <option>3 à 5 ans</option>
+                <option>Plus de 5 ans</option>
+                <option value="autre">Autre...</option>
+              </select>
+            </div>
+            <div class="form-group" id="exp-custom" style="display:none;">
+              <label>Précisez vos années d'expérience</label>
+              <input type="number" id="c-exp-custom" placeholder="Ex: 7" min="0" max="50"/>
+            </div>
+            <div class="form-group">
+              <label>Zone de travail</label>
+              <select id="c-zone">
+                <option>Abidjan (toutes communes)</option>
+                <option>Cocody / Plateau</option>
+                <option>Yopougon / Abobo</option>
+                <option>Marcory / Treichville</option>
+                <option>Bouaké</option>
+                <option>Yamoussoukro</option>
+                <option value="autre">Autre ville...</option>
+              </select>
+            </div>
+            <div class="form-group" id="zone-custom" style="display:none;">
+              <label>Précisez votre ville</label>
+              <input type="text" id="c-zone-custom" placeholder="Ex: San-Pédro, Daloa, Korhogo..."/>
+            </div>
+          </div>
+
+          <label class="checkbox-label" style="margin:16px 0;">
+            <input type="checkbox" required/>
+            J'accepte les <a href="#">conditions d'utilisation</a> de TaxiExpress
+          </label>
+
+          <button type="submit" class="btn-primary" style="width:100%;padding:15px;font-size:1rem;">
+            <i class="fa-solid fa-paper-plane"></i> Soumettre ma candidature
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><h3><i class="fa-solid fa-taxi"></i> TaxiExpress</h3><p>Votre partenaire de transport fiable.</p></div>
+      <div><h4>Navigation</h4><ul><li><a href="commander.html">Commander</a></li><li><a href="chauffeurs.html">Chauffeurs</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Contact</h4><p><i class="fa-solid fa-phone"></i> +225 07 00 00 00 00</p><p><i class="fa-solid fa-envelope"></i> contact@taxiexpress.ci</p></div>
+      <div><h4>Suivez-nous</h4><div class="social"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+    </div>
+    <div class="footer-bottom">© 2025 TaxiExpress — Tous droits réservés</div>
+  </footer>
+
+  <script src="../js/chauffeurs.js"></script>
+</body>
+</html>

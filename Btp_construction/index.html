@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BâtiPro - Entreprise de construction et BTP en Côte d'Ivoire. Devis gratuit et simulation en direct." />
+    <title>BâtiPro.ci - Expert en Construction & BTP</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- CSS Personnalisé -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION                          -->
+    <!-- ============================================ -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="IMAGE/logo.png" alt="BâtiPro Logo" class="logo" />
+                        <span class="brand-name">Bâti<span>Pro</span></span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#simulateur">Simulateur</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#pourquoi">Pourquoi nous</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#simulateur" class="btn-nav"><i class="fas fa-calculator"></i> Devis en direct</a></li>
+                </ul>
+                
+                <div class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                 -->
+    <!-- ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-certificate text-yellow"></i> Expert BTP & Génie Civil depuis 2025</span>
+                <h1>Construisons <span>votre avenir</span> ensemble</h1>
+                <p>Des solutions de construction innovantes, durables et adaptées à vos besoins. Plus de 50 chantiers réalisés avec succès en Côte d'Ivoire.</p>
+                <div class="hero-buttons">
+                    <a href="#simulateur" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Simuler un devis
+                    </a>
+                    <a href="#realisations" class="btn btn-outline">
+                        <i class="fas fa-images"></i> Voir nos réalisations
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- STATS & CHIFFRES CLÉS ANIMÉS                 -->
+    <!-- ============================================ -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number-wrap">
+                            <span class="counter" data-target="50">0</span>
+                            <span class="stat-suffix">+</span>
+                        </div>
+                        <p class="stat-title">Projets Livrés avec Succès</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number-wrap">
+                            <span class="counter" data-target="15">0</span>
+                            <span class="stat-suffix">+</span>
+                        </div>
+                        <p class="stat-title">Années d'Expertise BTP</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number-wrap">
+                            <span class="counter" data-target="100">0</span>
+                            <span class="stat-suffix">%</span>
+                        </div>
+                        <p class="stat-title">Respect des Délais & Normes</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number-wrap">
+                            <span class="counter" data-target="98">0</span>
+                            <span class="stat-suffix">%</span>
+                        </div>
+                        <p class="stat-title">Taux de Satisfaction Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- À PROPOS SECTION                             -->
+    <!-- ============================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">À propos</span>
+                <h2>Qui sommes-<span>nous</span> ?</h2>
+                <p>Découvrez l'entreprise qui construit votre avenir</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Une passion pour la <span>construction</span></h3>
+                    <p>Fondée en 2025, BâtiPro.ci est une entreprise de construction basée à Abidjan. Nous sommes spécialisés dans la construction résidentielle, commerciale et les travaux de rénovation.</p>
+                    <p>Notre mission est de fournir des solutions de construction de haute qualité, durables et innovantes, tout en respectant les délais et les budgets de nos clients.</p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Qualité et durabilité</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Respect des délais</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Transparence et confiance</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Innovation et modernité</span>
+                        </div>
+                    </div>
+                    <a href="#services" class="btn btn-primary">En savoir plus</a>
+                </div>
+                <div class="about-image">
+                    <img src="IMAGE/team.jpg" alt="Notre équipe d'ingénieurs BTP" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SERVICES SECTION                             -->
+    <!-- ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos services</span>
+                <h2>Ce que nous <span>vous offrons</span></h2>
+                <p>Des prestations complètes pour tous vos projets de construction</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Construction résidentielle</h3>
+                    <p>Villas, maisons individuelles, immeubles d'habitation sur mesure.</p>
+                    <a href="#simulateur" class="service-link">Estimer ce projet →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Construction commerciale</h3>
+                    <p>Bureaux, commerces, entrepôts et bâtiments professionnels.</p>
+                    <a href="#simulateur" class="service-link">Estimer ce projet →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Études & conception</h3>
+                    <p>Plans architecturaux, études techniques et suivi de projet.</p>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Rénovation & extension</h3>
+                    <p>Rénovation complète, agrandissement et mise aux normes.</p>
+                    <a href="#simulateur" class="service-link">Estimer ce projet →</a>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <a href="#simulateur" class="btn btn-primary">Lancer une simulation de projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SIMULATEUR DE DEVIS BTP EN DIRECT            -->
+    <!-- ============================================ -->
+    <section class="simulateur-section" id="simulateur">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b;">Calculateur Intelligent</span>
+                <h2 style="color: #ffffff;">Simulateur de <span>Devis en Direct</span></h2>
+                <p style="color: #cbd5e1;">Estimez instantanément le budget et la durée de votre chantier en quelques clics</p>
+            </div>
+
+            <div class="calc-wrapper">
+                <div class="calc-form-card">
+                    <div class="calc-group">
+                        <label for="projectType" class="calc-label">
+                            <i class="fas fa-building text-yellow"></i> 1. Type de projet de construction :
+                        </label>
+                        <select id="projectType" class="calc-select">
+                            <option value="150000" data-name="Villa / Maison Individuelle">Villa / Maison Individuelle (dès 150 000 FCFA/m²)</option>
+                            <option value="220000" data-name="Immeuble d'Habitation R+">Immeuble d'Habitation R+ (dès 220 000 FCFA/m²)</option>
+                            <option value="200000" data-name="Bâtiment Commercial & Bureaux">Bâtiment Commercial & Bureaux (dès 200 000 FCFA/m²)</option>
+                            <option value="90000" data-name="Rénovation Complète">Rénovation & Réhabilitation (dès 90 000 FCFA/m²)</option>
+                            <option value="130000" data-name="Entrepôt & Hangar Industriel">Entrepôt & Hangar Industriel (dès 130 000 FCFA/m²)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label for="surfaceSlider" class="calc-label">
+                                <i class="fas fa-ruler-combined text-yellow"></i> 2. Surface totale :
+                            </label>
+                            <div class="surface-val-display"><span id="surfaceDisplay">150</span> m²</div>
+                        </div>
+                        <input type="range" id="surfaceSlider" class="calc-range" min="20" max="1500" step="5" value="150" />
+                        <div class="range-marks">
+                            <span>20 m²</span>
+                            <span>500 m²</span>
+                            <span>1000 m²</span>
+                            <span>1500 m²</span>
+                        </div>
+                    </div>
+
+                    <div class="calc-group">
+                        <label class="calc-label">
+                            <i class="fas fa-layer-group text-yellow"></i> 3. Niveau de prestation & finitions :
+                        </label>
+                        <div class="finish-options">
+                            <label class="finish-pill">
+                                <input type="radio" name="finishLevel" value="0.70" />
+                                <div class="finish-content">
+                                    <strong>Gros Œuvre Seul</strong>
+                                    <small>Fondations & Structure</small>
+                                </div>
+                            </label>
+                            <label class="finish-pill active">
+                                <input type="radio" name="finishLevel" value="1.00" checked />
+                                <div class="finish-content">
+                                    <strong>Standard Clé en Main</strong>
+                                    <small>Finitions complètes</small>
+                                </div>
+                            </label>
+                            <label class="finish-pill">
+                                <input type="radio" name="finishLevel" value="1.45" />
+                                <div class="finish-content">
+                                    <strong>Haut Standing / Luxe</strong>
+                                    <small>Matériaux d'exception</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panneau des Résultats en Direct -->
+                <div class="calc-result-card">
+                    <div class="result-header">
+                        <span class="badge-result">Résultat Prévisionnel</span>
+                        <h3>Estimation Budgétaire</h3>
+                    </div>
+
+                    <div class="price-display-box">
+                        <div class="price-amount" id="calcTotalPrice">22 500 000 FCFA</div>
+                        <span class="price-note">* Coût estimatif hors terrain & taxes</span>
+                    </div>
+
+                    <div class="result-details">
+                        <div class="detail-row">
+                            <span><i class="fas fa-calendar-alt text-yellow"></i> Durée moyenne estimée :</span>
+                            <strong id="calcDuration">4 à 6 mois</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span><i class="fas fa-check-double text-yellow"></i> Projet sélectionné :</span>
+                            <strong id="calcSelectedName">Villa / Maison Individuelle</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span><i class="fas fa-shield-alt text-yellow"></i> Garantie incluse :</span>
+                            <strong class="text-green">Décennale & Suivi HSE</strong>
+                        </div>
+                    </div>
+
+                    <div class="calc-action-buttons">
+                        <a href="#" id="sendWhatsAppEstimate" target="_blank" class="btn btn-whatsapp-direct">
+                            <i class="fab fa-whatsapp"></i> Envoyer cette simulation sur WhatsApp
+                        </a>
+                        <a href="#contact" class="btn btn-outline-white">
+                            <i class="fas fa-envelope"></i> Demander une étude technique gratuite
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- RÉALISATIONS SECTION                         -->
+    <!-- ============================================ -->
+    <section class="realisations" id="realisations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos réalisations</span>
+                <h2>Découvrez nos <span>projets récents</span></h2>
+                <p>Des projets qui parlent de notre savoir-faire et de notre engagement</p>
+            </div>
+            
+            <div class="realisations-grid">
+                <div class="realisation-card">
+                    <img src="IMAGE/projet1.jpg" alt="Villa moderne Cocody" class="realisation-img" />
+                    <div class="realisation-overlay">
+                        <h3>Villa moderne Cocody</h3>
+                        <p>Construction d'une villa contemporaine de 400m²</p>
+                        <a href="#simulateur" class="btn btn-small">Estimer ce projet</a>
+                    </div>
+                </div>
+                
+                <div class="realisation-card">
+                    <img src="IMAGE/projet2.jpg" alt="Immeuble de bureaux Plateau" class="realisation-img" />
+                    <div class="realisation-overlay">
+                        <h3>Immeuble de bureaux Plateau</h3>
+                        <p>Bâtiment commercial de 8 étages en centre-ville</p>
+                        <a href="#simulateur" class="btn btn-small">Estimer ce projet</a>
+                    </div>
+                </div>
+                
+                <div class="realisation-card">
+                    <img src="IMAGE/projet3.jpg" alt="Résidence de luxe Riviera" class="realisation-img" />
+                    <div class="realisation-overlay">
+                        <h3>Résidence de luxe Riviera</h3>
+                        <p>Complexe résidentiel avec piscine et espaces verts</p>
+                        <a href="#simulateur" class="btn btn-small">Estimer ce projet</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="realisations-cta">
+                <a href="#simulateur" class="btn btn-outline">Calculer mon devis de construction</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- POURQUOI NOUS SECTION                        -->
+    <!-- ============================================ -->
+    <section class="pourquoi" id="pourquoi">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pourquoi nous</span>
+                <h2>Pourquoi choisir <span>BâtiPro</span> ?</h2>
+                <p>Les raisons qui font de nous votre partenaire de confiance</p>
+            </div>
+            
+            <div class="pourquoi-grid">
+                <div class="pourquoi-card">
+                    <div class="pourquoi-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Qualité garantie</h3>
+                    <p>Des matériaux de premier choix et un savoir-faire reconnu pour des constructions durables.</p>
+                </div>
+                
+                <div class="pourquoi-card">
+                    <div class="pourquoi-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Respect des délais</h3>
+                    <p>Nous livrons vos projets dans les temps, sans compromis sur la qualité.</p>
+                </div>
+                
+                <div class="pourquoi-card">
+                    <div class="pourquoi-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Transparence totale</h3>
+                    <p>Des devis clairs et un suivi régulier de l'avancement de vos travaux.</p>
+                </div>
+                
+                <div class="pourquoi-card">
+                    <div class="pourquoi-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Construction durable</h3>
+                    <p>Des solutions respectueuses de l'environnement pour un avenir meilleur.</p>
+                </div>
+                
+                <div class="pourquoi-card">
+                    <div class="pourquoi-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Équipe expérimentée</h3>
+                    <p>Des professionnels qualifiés et passionnés par leur métier.</p>
+                </div>
+                
+                <div class="pourquoi-card">
+                    <div class="pourquoi-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Meilleur rapport qualité-prix</h3>
+                    <p>Des tarifs compétitifs sans sacrifier la qualité de nos prestations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TÉMOIGNAGES SECTION                          -->
+    <!-- ============================================ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2>Ce que disent nos <span>clients</span></h2>
+                <p>Ils nous ont fait confiance, ils témoignent</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Une équipe professionnelle et à l'écoute. Le projet a été livré dans les délais avec une qualité exceptionnelle."</p>
+                    <div class="testimonial-author">
+                        <img src="IMAGE/client2.jpg" alt="Jean Kouadio" class="author-img" />
+                        <div>
+                            <h4>Jean Kouadio</h4>
+                            <span>Directeur, Entreprise XYZ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Je recommande vivement BâtiPro. Un suivi rigoureux et des conseils précieux tout au long du projet de construction."</p>
+                    <div class="testimonial-author">
+                        <img src="IMAGE/client1.jpg" alt="Marie N'Guessan" class="author-img" />
+                        <div>
+                            <h4>Marie N'Guessan</h4>
+                            <span>Propriétaire, Villa Cocody</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Un partenaire de confiance qui a su comprendre nos besoins et les réaliser avec une rigueur technique exemplaire."</p>
+                    <div class="testimonial-author">
+                        <img src="IMAGE/client3.jpg" alt="Koffi Amon" class="author-img" />
+                        <div>
+                            <h4>Koffi Amon</h4>
+                            <span>Promoteur immobilier</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION                              -->
+    <!-- ============================================ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2>Contactez-<span>nous</span></h2>
+                <p>Nous sommes à votre écoute pour tous vos projets</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Formulaire -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" placeholder="Votre nom" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Votre email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" placeholder="Votre numéro" />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject">
+                                <option value="devis">Demande de devis</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="rdv">Prise de rendez-vous</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info-wrapper">
+                    <h3>Nos <span>coordonnées</span></h3>
+                    <div class="contact-item-large">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Abidjan, Côte d'Ivoire</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>05 46 34 87 13</p>
+                            <p>05 08 96 17 13</p>
+                        </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:kouadioyaoanderson02@gmail.com" style="color: #ffffff; text-decoration: underline;">kouadioyaoanderson02@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item-large">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horaires</h4>
+                            <p>Lundi - Vendredi: 8h - 18h</p>
+                            <p>Samedi: 9h - 13h</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Suivez-nous</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CTA SECTION (Appel à l'action)              -->
+    <!-- ============================================ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à construire votre <span>projet</span> ?</h2>
+                <p>Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé.</p>
+                <div class="cta-buttons">
+                    <a href="#simulateur" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Lancer une simulation
+                    </a>
+                    <a href="https://wa.me/2250546348713?text=Bonjour%20B%C3%A2tiPro%2C%20je%20souhaite%20un%20devis%20ou%20des%20informations%20pour%20un%20projet%20de%20construction." target="_blank" class="btn btn-outline-white">
+                        <i class="fab fa-whatsapp"></i> Échanger sur WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Colonne 1: Entreprise -->
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="IMAGE/logo.png" alt="BâtiPro" class="footer-logo" />
+                        <h3>Bâti<span>Pro</span></h3>
+                    </div>
+                    <p>Expert en construction et BTP en Côte d'Ivoire. Nous réalisons vos projets avec passion et professionnalisme.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Colonne 2: Liens rapides -->
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#simulateur">Simulateur</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#pourquoi">Pourquoi nous</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 3: Services -->
+                <div class="footer-col">
+                    <h4>Nos services</h4>
+                    <ul>
+                        <li><a href="#services">Construction résidentielle</a></li>
+                        <li><a href="#services">Construction commerciale</a></li>
+                        <li><a href="#services">Études & conception</a></li>
+                        <li><a href="#services">Rénovation & extension</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 4: Contact -->
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Abidjan, Côte d'Ivoire</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>05 46 34 87 13</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>kouadioyaoanderson02@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun - Ven: 8h - 18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BâtiPro.ci - Tous droits réservés</p>
+                <p>
+                    <a href="#">Mentions légales</a> |
+                    <a href="#">Politique de confidentialité</a> |
+                    <a href="#">CGV</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BOUTON FLOTTANT WHATSAPP ===== -->
+    <a href="https://wa.me/2250546348713?text=Bonjour%20B%C3%A2tiPro%2C%20je%20souhaite%20des%20renseignements%20ou%20un%20devis%20pour%20un%20projet%20de%20construction." target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Discuter sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-badge">1</span>
+        <span class="whatsapp-tooltip">Discuter sur WhatsApp</span>
+    </a>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
